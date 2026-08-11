@@ -1,0 +1,83 @@
+I want you to apply the **exact same visual redesign approach** we used for the "My toolbox" section to these three sections:
+
+1. **Who I am**
+2. **Career Goal**
+3. **Featured work**
+
+Use the existing **"Where I work now"** section as the main visual/design reference.
+
+IMPORTANT:
+
+* Keep the existing content of all three sections exactly as it is.
+* Do NOT rewrite, remove, rename, or change any text.
+* Do NOT change the purpose or functionality of any section.
+* Do NOT copy the exact layout of "Where I work now".
+* Do NOT turn any of these sections into a timeline.
+* Do NOT unnecessarily refactor unrelated code.
+* Preserve all existing responsive behavior.
+* Preserve existing animations and interactions unless a visual adjustment is necessary.
+* Modify ONLY the visual/UI presentation of these three sections.
+
+I want the three sections to feel like they belong to the SAME premium portfolio design system as "Where I work now" and "My toolbox".
+
+Use the visual language from the reference section:
+
+* Layered div/card structure
+* Gradient backgrounds
+* Blue / cyan color palette
+* Subtle transparent backgrounds
+* Soft borders
+* Rounded corners
+* Depth and elevation
+* Glow effects
+* Subtle shadows
+* Clean spacing
+* Strong typography hierarchy
+* Decorative background elements
+* Premium hover states
+* Smooth, subtle animations
+* Consistent visual rhythm
+
+However, adapt the design intelligently to each section:
+
+### Who I am
+
+Keep it focused on the personal/about-me content.
+Use the visual system to make the content feel polished, structured, and premium.
+Do NOT force it into a timeline or experience layout.
+
+### Career Goal
+
+Keep it focused on the career-goal content.
+Use the same gradients, layers, borders, glow, spacing, and hierarchy.
+Make it visually distinct from "Who I am" while still clearly belonging to the same design system.
+
+### Featured work
+
+Keep the existing projects, project information, links, buttons, images, and functionality.
+Improve the visual presentation using the same design language.
+Cards/projects should feel like part of the same portfolio system as the other sections.
+Do NOT remove or replace project data.
+
+DESIGN RULE:
+
+"Where I work now" = visual reference
+"My toolbox" = already redesigned using this visual language
+"Who I am" + "Career Goal" + "Featured work" = apply the SAME design language, adapted to their existing layouts.
+
+The goal is NOT to make every section identical.
+
+The goal is to make the entire portfolio feel like it was designed using ONE consistent premium design system.
+
+Before editing:
+
+1. Inspect the current implementation of all three sections.
+2. Inspect the existing "Where I work now" implementation.
+3. Inspect the current redesigned "My toolbox" implementation.
+4. Identify the common visual patterns.
+5. Apply those patterns to the three requested sections.
+
+Make the smallest necessary changes.
+Do not touch unrelated sections or components.
+Do not change content or functionality.
+Focus primarily on UI, visual hierarchy, layers, gradients, borders, shadows, glow, spacing, and polish.

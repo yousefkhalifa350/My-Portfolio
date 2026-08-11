@@ -1,0 +1,93 @@
+Make ONLY the following text elements white.
+
+### STRICT RULE — DO NOT CHANGE ANY TITLES
+
+**This is extremely important:**
+
+* Do NOT change the color of ANY heading, title, label, section title, project title, card title, or `<h1> / <h2> / <h3> / <h4> / <h5> / <h6>` element.
+* Every title must keep its **current/existing color exactly as it is**.
+* Do NOT apply `text-white` to parent containers if that could make titles inherit white.
+* Apply the white color ONLY to the specific paragraphs/descriptions mentioned below.
+* Do NOT change any other styling, layout, spacing, typography, animations, backgrounds, borders, icons, or components.
+
+### 1. Technical Support Specialist
+
+Make ONLY this paragraph white:
+
+"Managed ERP system installation, configuration, and support across on-site and remote environments"
+
+Keep the **"Technical Support Specialist"** heading exactly as it currently is.
+
+### 2. Career Goal
+
+Make ONLY this paragraph white:
+
+"Transition into a Front-End Developer role while leveraging my technical support and problem-solving experience"
+
+Keep the **"Career Goal"** heading exactly as it currently is.
+
+### 3. Who I am
+
+Make ONLY the paragraph directly below "Who I am" white:
+
+"Frontend Developer specializing in building responsive, scalable, and high-performance web applications using React.js, Next.js, and TypeScript. Experienced in developing production-ready projects with REST APIs integration, authentication flows, and modern state management using Context API and TanStack Query. Skilled in form validation and handling with React Hook Form and Zod, and implementing SEO-friendly and optimized applications using SSR/SSG in Next.js. Focused on performance optimization techniques such as code splitting, lazy loading, and reusable component architecture. Passionate about writing clean, maintainable code and delivering seamless user experiences in Agile development environments."
+
+Keep the **"Who I am"** heading exactly as it currently is.
+
+### 4. Feature Cards
+
+Make ONLY the descriptive `<span>` / text below each title white:
+
+**01 — Front-End Engineering**
+"Clean, scalable interfaces built with React.js & Next.js"
+
+**02 — Performance & SEO**
+"Fast loads, Core Web Vitals and SSR/SSG-first architecture"
+
+**03 — APIs & State**
+"REST integration, TanStack Query, Context API and Zod validation"
+
+**04 — Team & Process**
+"Agile development, Git workflows and maintainable codebases"
+
+Keep ALL of these titles exactly as they currently are:
+
+* Front-End Engineering
+* Performance & SEO
+* APIs & State
+* Team & Process
+
+**DO NOT make the titles white.**
+
+### 5. Project Descriptions
+
+Make ONLY the description text below each project title white:
+
+**ShopMart — E-Commerce Store**
+"Shop smarter, live better: premium products, trusted brands (LC Waikiki, Canon, Samsung, Sony, Dell) and seamless shopping, made for you."
+
+**Live Weather**
+"A weather dashboard with live conditions, photos, live camera and news — served through a clean, fully responsive layout."
+
+**Start Framework**
+"A creative framework-driven multi-section site — portfolio, about and gallery pages with a modern, minimal aesthetic."
+
+**Daniels — Bootstrap Portfolio**
+"A polished Bootstrap portfolio: hero, services, works gallery, testimonials, counters and a working contact submit form."
+
+**React Task Manager**
+"A modern task management app for organizing tasks, tracking progress and staying productive — built with React."
+
+Keep ALL project titles exactly as they currently are and **DO NOT change their colors**.
+
+### FINAL CHECK — VERY IMPORTANT
+
+Before finishing, verify:
+
+**ONLY paragraphs/descriptions changed to white.**
+
+**ALL TITLES / HEADINGS KEEP THEIR EXISTING COLORS EXACTLY AS THEY WERE.**
+
+Do not use a parent element's text color if it would affect a heading.
+
+Do not modify anything else in the website.

@@ -1,0 +1,449 @@
+IMPORTANT — PERFORMANCE & QUALITY OPTIMIZATION ONLY
+
+I need you to optimize the existing portfolio project ONLY for performance, rendering, SEO, and technical best practices.
+
+🔴 ABSOLUTE RULE — DO NOT CHANGE THE PROJECT
+
+DO NOT change, redesign, remove, replace, or restructure any existing functionality or visual design.
+
+Keep 100% of the current project exactly as it is, including:
+
+UI / UX
+Layout
+Design
+Colors
+Fonts
+Spacing
+Animations
+Sections
+Components
+Content
+Text
+Images
+Icons
+Navigation
+Routing
+Features
+Functionality
+User interactions
+Responsive behavior
+Existing styling
+Existing component structure unless a change is technically required for performance
+
+The project is already built with Next.js.
+
+Do NOT migrate it to another framework.
+
+Do NOT rewrite the project from scratch.
+
+Do NOT make unnecessary refactors.
+
+The goal is NOT to make the website look different.
+
+The goal is to make the exact same website faster, cleaner, more SEO-friendly, and technically optimized.
+
+📸 STEP 0 — CREATE A BACKUP / SNAPSHOT FIRST
+
+Before touching ANY file:
+
+Create a safe backup/snapshot of the current working state.
+Make sure the current code can be restored exactly if anything goes wrong.
+Record the current Git state if Git is available.
+Do NOT start editing until the rollback point is secured.
+
+If possible, create a Git checkpoint/commit or another reliable rollback mechanism.
+
+Rollback requirement
+
+If any optimization causes:
+
+visual changes
+broken functionality
+layout issues
+routing issues
+animation issues
+responsive issues
+build errors
+runtime errors
+
+then immediately revert the problematic changes and restore the previous working state.
+
+The existing project is the source of truth.
+
+🎯 CURRENT PERFORMANCE PROBLEM
+
+The current Lighthouse-style results are approximately:
+
+Performance: 45
+Accessibility: 90
+SEO: 90
+Best Practices: 80
+
+The main goal is to significantly improve:
+
+Performance
+
+Target: 90+ if realistically achievable
+
+Best Practices
+
+Target: 90+
+
+SEO
+
+Target: 95–100
+
+Accessibility
+
+Keep it at least as good as the current score, preferably improve it without changing the design.
+
+⚡ 1. PERFORMANCE OPTIMIZATION
+
+Analyze the entire Next.js project and identify the actual causes of the low Performance score.
+
+Focus on things such as:
+
+LCP
+FCP
+TBT
+INP
+CLS
+Speed Index
+Render-blocking resources
+Unnecessary JavaScript
+Large JavaScript bundles
+Unused JavaScript
+Unused CSS
+Large images
+Improper image loading
+Image dimensions
+Image formats
+Font loading
+Third-party scripts
+Client-side rendering where it is unnecessary
+Excessive hydration
+Components that unnecessarily use "use client"
+Heavy dependencies
+Unnecessary re-renders
+Code splitting
+Lazy loading
+Dynamic imports where appropriate
+Prefetching behavior
+Next.js caching opportunities
+Server Components vs Client Components
+Static rendering opportunities
+Network requests
+Duplicate requests
+Resource priority
+
+Use Next.js-native optimization techniques whenever possible.
+
+🖼️ 2. IMAGE OPTIMIZATION
+
+Inspect all images carefully.
+
+Where technically appropriate, use the existing Next.js image optimization system.
+
+Optimize:
+
+image dimensions
+responsive image sizing
+loading behavior
+priority
+quality
+modern image formats
+unnecessary oversized images
+above-the-fold image loading
+
+However:
+
+DO NOT change the visual appearance of the images.
+
+The images must look visually identical to the user.
+
+Do not replace images with different images.
+
+Do not remove images.
+
+🔤 3. FONT OPTIMIZATION
+
+Inspect all fonts and font-loading behavior.
+
+Optimize font loading to reduce:
+
+render blocking
+layout shifts
+unnecessary network requests
+font-related LCP/FCP delays
+
+Use appropriate Next.js font optimization where possible.
+
+But:
+
+DO NOT change the typography visually.
+
+The website should look the same.
+
+🧠 4. RENDERING OPTIMIZATION
+
+Analyze the rendering architecture.
+
+Since this is a Next.js project, determine whether components are unnecessarily client-rendered.
+
+Where safe:
+
+Prefer Server Components
+Reduce unnecessary "use client"
+Reduce hydration
+Avoid unnecessary client-side JavaScript
+Use static rendering where possible
+Use dynamic imports only when they genuinely improve performance
+Keep interactive components working exactly as before
+IMPORTANT
+
+Do not convert components blindly.
+
+Before changing rendering behavior, verify that the component does not depend on:
+
+browser APIs
+hooks
+event handlers
+client state
+animations
+interactive behavior
+
+The final behavior must remain identical.
+
+📦 5. JAVASCRIPT / BUNDLE OPTIMIZATION
+
+Inspect the production bundle.
+
+Find:
+
+unnecessary dependencies
+duplicated dependencies
+heavy libraries
+unused imports
+unnecessary client-side code
+code that can be loaded lazily
+code that can be moved to the server
+
+Optimize the bundle without changing functionality.
+
+Do NOT remove a dependency simply because it appears unused without verifying it.
+
+Do not break anything just to reduce bundle size.
+
+🛠️ 6. BEST PRACTICES
+
+Improve the project's technical quality according to modern Next.js and web standards.
+
+Check for:
+
+console errors
+browser warnings
+deprecated APIs
+incorrect HTML
+invalid attributes
+insecure resource loading
+broken links
+incorrect image handling
+missing dimensions
+unnecessary third-party scripts
+incorrect caching
+production configuration issues
+
+Fix issues that are genuinely responsible for the Lighthouse Best Practices score.
+
+Do not introduce unnecessary configuration.
+
+🔎 7. SEO OPTIMIZATION
+
+Improve SEO while keeping the existing content and visual design unchanged.
+
+Inspect:
+
+<title>
+meta description
+canonical URL
+robots configuration
+sitemap
+Open Graph metadata
+Twitter metadata
+favicon
+viewport
+heading hierarchy
+semantic HTML
+image alt text
+crawlability
+indexability
+structured metadata where appropriate
+
+Use the Next.js Metadata API if the project structure supports it.
+
+IMPORTANT
+
+Do not rewrite the website's visible content just for SEO.
+
+Do not add spammy keywords.
+
+Do not change the design.
+
+Do not add fake content.
+
+SEO improvements should be technically correct and natural.
+
+♿ 8. ACCESSIBILITY
+
+The current Accessibility score is already around 90.
+
+Do NOT sacrifice accessibility for performance.
+
+Where safe, improve:
+
+alt attributes
+semantic HTML
+button/link semantics
+keyboard navigation
+labels
+ARIA usage where actually needed
+color/contrast issues if they can be fixed without changing the visual identity
+
+Keep the current design intact.
+
+📱 9. RESPONSIVENESS
+
+Do NOT redesign the responsive layout.
+
+Do NOT change breakpoints unless there is an actual bug.
+
+Do NOT change mobile/tablet/desktop behavior unless required to fix a technical issue.
+
+The current responsive design is part of the source of truth.
+
+🧪 10. VERIFY EVERYTHING AFTER OPTIMIZATION
+
+After making changes:
+
+Run the production build.
+Confirm there are no TypeScript errors.
+Confirm there are no ESLint errors if ESLint is configured.
+Confirm there are no runtime errors.
+Confirm all routes work.
+Confirm all images load.
+Confirm navigation works.
+Confirm animations still work.
+Confirm responsive behavior still works.
+Compare the optimized version against the original.
+
+Then run a production performance audit/Lighthouse if available.
+
+📊 PERFORMANCE TARGETS
+
+Aim for approximately:
+
+Performance: 90+
+Accessibility: 90+
+Best Practices: 90+
+SEO: 95–100
+
+But DO NOT cheat the score.
+
+Do not hide content.
+
+Do not remove functionality.
+
+Do not disable animations just to improve the score.
+
+Do not artificially manipulate Lighthouse.
+
+Do not make visual compromises purely for the score.
+
+The real goal is actual website performance.
+
+🛑 VERY IMPORTANT — CHANGE CONTROL
+
+Before changing anything, inspect the entire project and understand:
+
+project structure
+app/pages architecture
+components
+dependencies
+images
+fonts
+metadata
+configuration
+rendering strategy
+
+Then make only the minimum necessary changes.
+
+For every modification, ask:
+
+"Does this directly improve performance, rendering, SEO, accessibility, or best practices?"
+
+If the answer is NO, DO NOT CHANGE IT.
+
+🔄 ROLLBACK SAFETY
+
+If the final result is worse than the original in any important way:
+
+ROLL BACK the optimization changes.
+
+The original project must always remain recoverable.
+
+If a specific optimization causes a regression, revert only that optimization and keep safe improvements.
+
+📋 FINAL REPORT
+
+When finished, give me a concise report containing:
+
+1. Files changed
+
+List every file modified.
+
+2. What was optimized
+
+For each important change, explain:
+
+what was wrong
+what you changed
+why it improves performance/SEO/best practices
+3. What was intentionally NOT changed
+
+Confirm that you did not change:
+
+UI
+UX
+design
+content
+features
+functionality
+animations
+routing
+
+unless a specific technical change was absolutely necessary.
+
+4. Validation
+
+Report:
+
+production build result
+TypeScript result
+lint result
+runtime result
+Lighthouse/performance result if available
+5. Rollback
+
+Tell me exactly how to restore the original version if needed.
+
+FINAL RULE
+
+This is an optimization task, NOT a redesign task.
+
+The existing portfolio is the source of truth.
+
+Make it faster, cleaner, more SEO-friendly, better rendered, and technically stronger — while preserving the exact same website experience.
+
+Do not change anything unrelated to optimization.
+
+Backup first. Analyze first. Optimize carefully. Verify everything. Keep rollback possible.

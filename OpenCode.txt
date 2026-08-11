@@ -1,0 +1,318 @@
+First  Section 
+
+
+
+Fix the typo 'Reac' to 'React'.
+
+Reword the tagline to focus on speed and scalability (under 1.5s load time).
+
+Change the animated text to: 'Design Systems', 'Performance Optimization', 'UI/UX Bridge'.
+
+Apply a vibrant gradient (Blue to Purple) to my name 'Yousef'.
+
+Add a subtle glowing border to my profile picture (circular shape).
+
+Change the 'Connect With Me' button to a primary solid button with a pulse animation on hover, and 'My Resume' to an outlined button.
+
+Add a stats section below the buttons showing: '5+ Years', '20+ Projects', '100% Satisfaction'.
+
+Ensure the layout is responsive; on mobile, the image goes on top of the text.
+
+Add a micro-interaction where the text fades in from left to right, and the image fades in from right to left on load.
+
+Ensure the contrast ratio for all text is at least 4.5:1 against the background.
+Do not change the structure of the code, just enhance the CSS, content, and animation logic."
+
+
+
+
+
+
+
+
+
+
+
+About me >> Who I'm
+
+Frontend Developer specializing in building responsive, scalable, and high-performance web applications using React.js, Next.js, and TypeScript. Experienced in developing production-ready projects with REST APIs integration, authentication flows, and modern state management using Context API and TanStack Query. Skilled in form validation and handling with React Hook Form and Zod, and implementing SEO-friendly and optimized applications using SSR/SSG in Next.js. Focused on performance optimization techniques such as code splitting, lazy loading, and reusable component architecture. Passionate about writing clean, maintainable code and delivering seamless user experiences in Agile development environments.
+
+tec Worked With
+  'HTML5', 'CSS3', 'JavaScript (ES6+)', 'TypeScript',
+    'React.js', 'Next.js', 'Tailwind CSS',
+    'Context API', 'TanStack Query', 'React Hook Form', 'Zod',
+    'REST APIs', 'Git', 'Vite', 'Code Splitting', 'SSR/SSG'
+
+
+
+
+--------------------------
+
+Current Position Card >> Tec
+Create a modern "Current Position" card for a developer portfolio. The card should feature a job title, company name, employment period, a short professional summary on the left, and a checklist of key responsibilities on the right. Use a dark glassmorphism design with rounded corners, subtle purple accent borders, soft shadows, clean typography, and a responsive two-column layout.
+
+11/2024
+job:Technical Support Specialist
+Company-name:Linchpin
+System-name:AlMotakamelERP
+Managed ERP system installation, configuration, and support across on-site and remote
+environments
+
+•Handled Oracle database and application server setup while resolving technical issues
+Technical Support Specialist
+ERP Installation
+Database Installation
+Oracle
+Application Server
+Client Support
+Troubleshooting
+
+
+--------------------------
+
+Career Goal
+
+قول إن هدفك:
+
+Transition into a Front-End Developer role while leveraging my technical support and problem-solving experience
+
+
+-------------------------
+Tec-SKills
+Front-End
+HTML
+CSS
+JavaScript
+TypeScript
+React
+Next.js
+Tailwind CSS
+Bootstrap
+-------------------------
+
+Tools
+Git
+GitHub
+VS Code
+Figma
+Vite
+npm
+-------------------------
+
+Backend & APIs
+REST API
+JSON
+Postman
+Technical Support & Enterprise
+-------------------------
+
+Technical Support & Enterprise
+Oracle Database
+Oracle APEX
+Application Server
+SQL
+Windows Server
+ERP Systems
+-------------------------
+
+Projects
+
+
+
+
+
+
+
+Project
+-----------------------------
+Create a portfolio projects section with the following specifications:
+
+**Layout:**
+- 4 project cards displayed in a responsive grid (2x2 on desktop, single column on mobile)
+- Each card should be split horizontally into two halves:
+  * Top half (50%): Project preview image/screenshot
+  * Bottom half (50%): Project info with dark overlay
+
+**Each card bottom half should contain:**
+1. Project title (bold, white text)
+2. Two action buttons side by side:
+   - "Live Demo" button (with external link icon, colored, e.g., #00b4d8)
+   - "GitHub" button (with GitHub icon, outlined style)
+3. Tech stack tags/badges below the buttons (small rounded pills showing tools used)
+
+**Sample project data to use (I will replace later):**
+- Card 1: 
+  * Title: "Weather Dashboard"
+  * Image: https://via.placeholder.com/600x400/1a1a2e/00b4d8?text=Weather+Dashboard
+  * Live Demo: https://example-weather-app.netlify.app
+  * GitHub: https://github.com/example/weather-dashboard
+  * Tech: React, OpenWeather API, Chart.js, Tailwind CSS
+
+- Card 2:
+  * Title: "E-Commerce Store"
+  * Image: https://via.placeholder.com/600x400/16213e/e94560?text=E-Commerce+Store
+  * Live Demo: https://example-store.vercel.app
+  * GitHub: https://github.com/example/ecommerce-store
+  * Tech: Next.js, Stripe, MongoDB, Redux
+
+- Card 3:
+  * Title: "Task Management App"
+  * Image: https://via.placeholder.com/600x400/0f3460/53a8b6?text=Task+Manager
+  * Live Demo: https://example-tasks.netlify.app
+  * GitHub: https://github.com/example/task-manager
+  * Tech: Vue.js, Firebase, Vuex, SCSS
+
+- Card 4:
+  * Title: "AI Chat Application"
+  * Image: https://via.placeholder.com/600x400/1b1b2f/c06c84?text=AI+Chat+App
+  * Live Demo: https://example-ai-chat.vercel.app
+  * GitHub: https://github.com/example/ai-chat-app
+  * Tech: Python, FastAPI, OpenAI, React
+
+**Styling requirements:**
+- Cards should have rounded corners, subtle shadow, and hover effect (slight lift + glow)
+- Dark theme background for the overall section
+- Smooth transitions on hover (0.3s ease)
+- Fully responsive design
+- Section heading: "My Projects" or "Featured Work" with an underline accent
+
+**Implementation:** Pure HTML, CSS, and JavaScript (or React if you prefer). Make it production-ready with clean, well-commented code that I can easily swap my real project details into.
+
+Make the code modular so I can easily:
+- Change project images
+- Update live demo & GitHub URLs
+- Modify tech stack tags per project
+
+
+
+1-section My_name-Image-Connect with me -Download-cv 2-about me 3-Current Position 4-tec Skills 5-projects 6-contact
+
+
+Contact
+
+
+----------------------------------------------
+Propmt Urgent 
+
+You are a Senior Next.js 16, React 19, TypeScript, and Frontend Architect.
+
+Your task is to perform a complete production-ready audit and optimization of this project.
+
+Important rules:
+
+- Do NOT redesign the UI.
+- Do NOT change colors, spacing, typography, layout, or animations unless they are causing bugs.
+- Preserve the existing visual appearance.
+- Focus only on code quality, architecture, accessibility, SEO, performance, and maintainability.
+
+Please audit and improve the project in the following areas:
+
+## 1. TypeScript
+- Remove all TypeScript errors.
+- Remove all unnecessary "any" types.
+- Add proper interfaces and types.
+- Use strict typing everywhere.
+- Fix nullable values correctly.
+- Improve props typing.
+- Remove dead code and unused imports.
+
+## 2. Next.js Best Practices
+- Ensure correct App Router usage.
+- Use Server Components whenever possible.
+- Only use Client Components when necessary.
+- Optimize routing structure.
+- Validate folder structure.
+- Use next/image correctly.
+- Use next/font.
+- Ensure production-ready configuration.
+
+## 3. SEO
+- Implement Metadata API.
+- Add proper page titles.
+- Add descriptions.
+- Add Open Graph metadata.
+- Add Twitter metadata.
+- Add canonical URLs.
+- Add robots metadata.
+- Generate sitemap if missing.
+- Generate robots.txt if missing.
+- Ensure semantic HTML.
+- Validate heading hierarchy.
+- Improve internal linking.
+
+## 4. Performance
+- Optimize images.
+- Remove unnecessary re-renders.
+- Optimize React rendering.
+- Add lazy loading where appropriate.
+- Optimize bundle size.
+- Remove unused dependencies.
+- Optimize imports.
+- Check code splitting.
+- Reduce client-side JavaScript.
+- Optimize fonts.
+- Improve Core Web Vitals.
+
+## 5. Accessibility
+- Add missing aria labels.
+- Improve keyboard navigation.
+- Ensure focus states exist.
+- Ensure color contrast is acceptable.
+- Add alt text.
+- Fix heading hierarchy.
+- Improve semantic HTML.
+- Ensure screen reader compatibility.
+
+## 6. Code Quality
+- Improve folder structure if needed.
+- Improve component organization.
+- Remove duplicated logic.
+- Improve naming.
+- Follow clean architecture.
+- Follow SOLID principles where applicable.
+- Improve readability.
+
+## 7. React
+- Optimize hooks.
+- Remove unnecessary useEffect.
+- Remove unnecessary useMemo/useCallback.
+- Prevent unnecessary renders.
+- Improve state management.
+- Improve component composition.
+
+## 8. Tailwind CSS
+- Remove duplicated utility classes.
+- Simplify class names.
+- Improve responsive consistency.
+- Remove unused styles.
+
+## 9. Security
+- Validate external links.
+- Prevent common XSS risks.
+- Secure target="_blank" links.
+- Validate environment variable usage.
+
+## 10. General Improvements
+- Remove console.log statements.
+- Remove unused files.
+- Remove unused assets.
+- Remove commented code.
+- Fix lint warnings.
+- Ensure production build succeeds.
+
+After finishing:
+
+1. Generate a detailed report containing:
+   - Problems found
+   - Severity
+   - Files affected
+   - Fix applied
+   - Expected improvement
+
+2. Never modify the design unless required to fix a bug.
+
+3. Before changing any file, explain why.
+
+4. Make small safe commits logically grouped by feature.
+
+5. If a change could break the UI, ask before applying it.
