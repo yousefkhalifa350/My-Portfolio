@@ -1,7 +1,6 @@
 // components/ui/Sections/skills.tsx
-"use client";
 
-import { motion } from "framer-motion";
+import type { CSSProperties } from "react";
 import {
   LayoutTemplate,
   Wrench,
@@ -91,20 +90,22 @@ export default function Skills() {
                   {/* skills chips */}
                   <div className="relative mt-5 flex flex-wrap gap-2">
                     {cat.skills.map((skill, j) => (
-                      <motion.span
+                      <span
                         key={skill}
-                        initial={{ opacity: 0, scale: 0.85 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: i * 0.05 + j * 0.04, duration: 0.3 }}
-                        className="inline-flex cursor-default items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-3.5 py-1.5 text-xs font-semibold text-slate-200 transition-all duration-200 hover:-translate-y-0.5 hover:border-sky-400/50 hover:bg-sky-500/10 hover:text-[#00a8e8]"
+                        style={
+                          {
+                            "--chip-delay": `${i * 0.05 + j * 0.04}s`,
+                            "--chip-from": 0.85,
+                          } as CSSProperties
+                        }
+                        className="reveal-chip inline-flex cursor-default items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-3.5 py-1.5 text-xs font-semibold text-slate-200 transition-all duration-200 hover:-translate-y-0.5 hover:border-sky-400/50 hover:bg-sky-500/10 hover:text-[#00a8e8]"
                       >
                         <span
                           className={`h-1.5 w-1.5 rounded-full bg-gradient-to-r ${accent}`}
                           aria-hidden="true"
                         />
                         {skill}
-                      </motion.span>
+                      </span>
                     ))}
                   </div>
                 </div>

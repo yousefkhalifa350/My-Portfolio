@@ -1,7 +1,6 @@
 // components/ui/Sections/about.tsx
-"use client";
 
-import { motion } from "framer-motion";
+import type { CSSProperties } from "react";
 import { ScrollReveal } from "../ui/scroll/scroll";
 import { about } from "@/lib/data";
 
@@ -76,16 +75,13 @@ export default function About() {
             </h3>
             <div className="flex flex-wrap gap-2 ">
               {about.technologies.map((tech, i) => (
-                <motion.span
+                <span
                   key={tech}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.03, duration: 0.3 }}
-                  className="relative cursor-default rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-xs font-semibold text-slate-200 backdrop-blur-md transition-all duration-200 hover:-translate-y-0.5 hover:border-sky-400/50 hover:bg-sky-500/10 hover:text-[#00a8e8] sm:text-sm"
+                  style={{ "--chip-delay": `${i * 0.03}s`, "--chip-from": 0.8 } as CSSProperties}
+                  className="reveal-chip relative cursor-default rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-xs font-semibold text-slate-200 backdrop-blur-md transition-all duration-200 hover:-translate-y-0.5 hover:border-sky-400/50 hover:bg-sky-500/10 hover:text-[#00a8e8] sm:text-sm"
                 >
                   {tech}
-                </motion.span>
+                </span>
               ))}
             </div>
           </div>

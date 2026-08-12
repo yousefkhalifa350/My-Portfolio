@@ -1,7 +1,6 @@
 // components/ui/Sections/position.tsx
-"use client";
 
-import { motion } from "framer-motion";
+import type { CSSProperties } from "react";
 import { Briefcase, Building2, CalendarDays, CheckCircle2, Cpu, Rocket } from "lucide-react";
 import { ScrollReveal } from "../ui/scroll/scroll";
 import { experience, careerGoal } from "@/lib/data";
@@ -87,13 +86,10 @@ export default function Position() {
                 </h4>
                 <ul className="mt-5 space-y-3.5">
                   {experience.responsibilities.map((item, i) => (
-                    <motion.li
+                    <li
                       key={item}
-                      initial={{ opacity: 0, x: 16 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ delay: i * 0.07, duration: 0.4 }}
-                      className="flex items-start gap-3"
+                      style={{ "--chip-delay": `${i * 0.07}s` } as CSSProperties}
+                      className="reveal-item flex items-start gap-3"
                     >
                       <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-sky-500 to-blue-600 shadow-md shadow-sky-500/30">
                         <CheckCircle2 className="h-3 w-3 text-white" aria-hidden="true" />
@@ -101,7 +97,7 @@ export default function Position() {
                       <span className="text-sm font-medium leading-snug text-slate-200 transition-colors duration-200 hover:text-white sm:text-[15px]">
                         {item}
                       </span>
-                    </motion.li>
+                    </li>
                   ))}
                 </ul>
               </div>

@@ -241,8 +241,9 @@ ORG
 
 @font-face {
   font-family: "Inter";
-  src: url("/fonts/Inter_24pt-ExtraBoldItalic.ttf") format("truetype");
+  src: url("/fonts/Inter_24pt-ExtraBoldItalic.woff2") format("woff2");
   font-weight: 800;
+  font-display: swap;
 }
 
 @layer base {
@@ -689,5 +690,78 @@ html.theme-transition *::after {
   .global-beam,
   .global-particle {
     animation: none !important;
+  }
+}
+
+/* ========== PERFORMANCE: CSS-driven entrance & float animations ========== */
+/* Replaces JS-driven framer-motion animations with identical CSS keyframes
+   so above-the-fold content paints without waiting for hydration. */
+
+@keyframes hero-in-left {
+  from { opacity: 0; transform: translateX(-60px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes hero-in-right {
+  from { opacity: 0; transform: translateX(60px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+.hero-in-left {
+  animation: hero-in-left 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+.hero-in-right {
+  animation: hero-in-right 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes hero-bob {
+  0%, 100% { transform: translateY(0); }
+  25%      { transform: translateY(-5px); }
+  50%      { transform: translateY(0); }
+  75%      { transform: translateY(5px); }
+}
+.hero-bob {
+  animation: hero-bob 2.5s ease-in-out infinite;
+}
+
+/* Staggered chip/item reveals. Containers toggle [data-visible] via the
+   ScrollReveal client component; children animate via paused CSS animations
+   (same offsets/delays/durations as the former framer-motion setup). */
+
+@keyframes chip-pop {
+  from { opacity: 0; scale: var(--chip-from, 0.85); }
+  to   { opacity: 1; scale: 1; }
+}
+.reveal-chip {
+  animation: chip-pop 0.3s ease-out both paused;
+  animation-delay: var(--chip-delay, 0ms);
+}
+[data-visible="true"] .reveal-chip {
+  animation-play-state: running;
+}
+
+@keyframes item-in {
+  from { opacity: 0; transform: translateX(16px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+.reveal-item {
+  animation: item-in 0.4s ease-out both paused;
+  animation-delay: var(--chip-delay, 0ms);
+}
+[data-visible="true"] .reveal-item {
+  animation-play-state: running;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-in-left,
+  .hero-in-right,
+  .hero-bob {
+    animation: none !important;
+    opacity: 1;
+  }
+  .reveal-chip,
+  .reveal-item {
+    animation: none !important;
+    opacity: 1;
+    scale: 1;
+    transform: none;
   }
 }

@@ -1,5 +1,4 @@
 // components/ui/Sections/portfolio.tsx
-"use client";
 
 import Image from "next/image";
 import { ExternalLink } from "lucide-react";

@@ -1,5 +1,4 @@
 // components/ui/ui/card/shine-border.tsx
-"use client"
 
 import * as React from "react"
 

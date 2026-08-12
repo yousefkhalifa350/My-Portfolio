@@ -4,7 +4,7 @@ export const profile = {
   firstName: "Yousef",
   fullName: "Yousef Hesham",
   role: "Front-End Developer",
-  photo: "/test1.webp",
+  photo: "/projects/test1.webp",
   availability: "Available for work",
   resume: {
     url: "/CV/Yousef Hesham_Resume.pdf",
@@ -126,7 +126,7 @@ export const projects = [
     description:
       "Shop smarter, live better: premium products, trusted brands (LC Waikiki, Canon, Samsung, Sony, Dell) and seamless shopping, made for you.", 
     image:
-      "/projects/shopmart.jpg",
+      "/projects/shopmart.webp",
     live: "https://shopmart-ecommerce.vercel.app/",
     github: "https://github.com/yousefkhalifa350/shopmart-ecommerce",
     tech: ["Next.js", "React", "Tailwind CSS", "REST APIs"],
@@ -137,7 +137,7 @@ export const projects = [
     description:
       "A weather dashboard with live conditions, photos, live camera and news — served through a clean, fully responsive layout.",
     image:
-      "/projects/live-weather.jpg",
+      "/projects/live-weather.webp",
     live: "https://yousefkhalifa350.github.io/live-weather/",
     github: "https://github.com/yousefkhalifa350/live-weather",
     tech: ["HTML5", "CSS3", "JavaScript", "Fully Responsive"],
@@ -148,7 +148,7 @@ export const projects = [
     description:
       "A creative framework-driven multi-section site — portfolio, about and gallery pages with a modern, minimal aesthetic.",
     image:
-      "/projects/start-framework.jpg",
+      "/projects/start-framework.webp",
     live: "https://start-framework-three-sigma.vercel.app/About",
     github: "https://github.com/yousefkhalifa350/Start-Framework",
     tech: ["Bootstrap", "HTML5", "CSS3", "Vercel"],
@@ -159,7 +159,7 @@ export const projects = [
     description:
       "A polished Bootstrap portfolio: hero, services, works gallery, testimonials, counters and a working contact submit form.",
     image:
-      "/projects/daniels.jpg",
+      "/projects/daniels.webp",
     live: "https://yousefkhalifa350.github.io/exam-bootstrap/",
     github: "https://github.com/yousefkhalifa350/exam-bootstrap",
     tech: ["Bootstrap", "HTML5", "CSS3", "JavaScript"],
@@ -170,7 +170,7 @@ export const projects = [
     description:
       "A modern task management app for organizing tasks, tracking progress and staying productive — built with React.",
     image:
-      "/projects/task-manager.jpg",
+      "/projects/task-manager.webp",
     live: "https://task-manager-six-pied-73.vercel.app/",
     github: "https://github.com/yousefkhalifa350/React-Task-Manager",
     tech: ["React", "JavaScript", "Tailwind CSS", "Vercel"],
@@ -182,7 +182,7 @@ export const projects = [
     description:
       "A modern task management app for organizing tasks, tracking progress and staying productive — built with React.",
     image:
-      "/projects/fokir.jpg",
+      "/projects/fokir.webp",
     live: "https://yousefkhalifa350.github.io/Assignment-4/",
     github: "https://github.com/yousefkhalifa350/Assignment-4",
     tech: ["React", "JavaScript", "Tailwind CSS", "Vercel"],
