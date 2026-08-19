@@ -26,7 +26,10 @@ export function StatCounter({ value, suffix, label }: StatCounterProps) {
   }, [inView, value]);
 
   return (
-    <div ref={ref} className="text-center">
+    <div
+      ref={ref}
+      className="flex min-h-[4.5rem] flex-col items-center justify-center text-center"
+    >
       <span className="text-gradient block text-2xl font-extrabold tabular-nums sm:text-3xl lg:text-4xl">
         {display}
         {suffix}

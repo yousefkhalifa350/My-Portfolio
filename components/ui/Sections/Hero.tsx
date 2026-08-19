@@ -2,7 +2,7 @@
 import Image from "next/image";
 import { Download, Eye } from "lucide-react";
 import { ShineBorder } from "../ui/card/shine-border";
-import { StatCounter } from "./StatCounter";
+import HeroStats from "./HeroStats";
 import { profile, heroStats } from "@/lib/data";
 
 export default function Hero() {
@@ -51,9 +51,7 @@ export default function Hero() {
 
             {/* Stats */}
             <div className="mt-10 grid grid-cols-3 gap-3 rounded-2xl border border-white/60 bg-white/60 p-5 shadow-lg shadow-sky-900/5 backdrop-blur-xl sm:gap-4 sm:p-6 dark:border-[#003459]/60 dark:bg-[#002233]/40">
-              {heroStats.map((stat) => (
-                <StatCounter key={stat.label} {...stat} />
-              ))}
+              <HeroStats stats={heroStats} />
             </div>
           </div>
 

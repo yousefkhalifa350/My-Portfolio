@@ -41,6 +41,9 @@ export function ShineBorder({
         {
           "--border-width": `${borderWidth}px`,
           "--duration": `${duration}s`,
+          "--shine-image": `radial-gradient(transparent,transparent, ${
+            Array.isArray(shineColor) ? shineColor.join(",") : shineColor
+          },transparent,transparent)`,
           backgroundImage: `radial-gradient(transparent,transparent, ${
             Array.isArray(shineColor) ? shineColor.join(",") : shineColor
           },transparent,transparent)`,
@@ -54,7 +57,7 @@ export function ShineBorder({
         } as React.CSSProperties
       }
       className={cn(
-        "motion-safe:animate-shine pointer-events-none absolute inset-0 size-full rounded-[inherit] will-change-[background-position]",
+        "shine-border pointer-events-none absolute inset-0 size-full rounded-[inherit]",
         className
       )}
       {...props}

@@ -1,12 +1,12 @@
 "use client";
-import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 type Direction = "up" | "left" | "right";
-const directionMap = {
-  up:    { y: 60, x: 0 },
-  left:  { x: 60, y: 0 },
-  right: { x: -60, y: 0 },
+
+const revealClassMap: Record<Direction, string> = {
+  up: "reveal-wrap-up",
+  left: "reveal-wrap-left",
+  right: "reveal-wrap-right",
 };
 
 export function ScrollReveal({
@@ -19,19 +19,38 @@ export function ScrollReveal({
   className?: string;
 }) {
   const ref = useRef<HTMLDivElement>(null);
-  const inView = useInView(ref, { once: true, margin: "-50px" });
-  const { x, y } = directionMap[direction];
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+
+    if (typeof IntersectionObserver === "undefined") {
+      const id = requestAnimationFrame(() => setVisible(true));
+      return () => cancelAnimationFrame(id);
+    }
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setVisible(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: "-50px 0px -50px 0px", threshold: 0.1 }
+    );
+
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <motion.div
+    <div
       ref={ref}
-      initial={{ opacity: 0, x, y }}
-      whileInView={{ opacity: 1, x: 0, y: 0 }}
-      viewport={{ once: true, margin: "-50px" }}
-      transition={{ duration: 0.7, ease: "easeOut" }}
-      data-visible={inView ? "true" : "false"}
-      className={className}
+      data-visible={visible ? "true" : "false"}
+      className={`reveal-wrap ${revealClassMap[direction]} ${className}`}
     >
       {children}
-    </motion.div>
+    </div>
   );
 }

@@ -1,9 +1,20 @@
 import type { Metadata, Viewport } from "next";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/ui/ui/navbar/navbar";
 import { ThemeProvider } from "@/components/ui/theme-provider";
 
 const siteUrl = "https://yousef-hesham.vercel.app";
+
+// next/font/google self-hosts Inter at build time (subsetted, hashed, preloaded)
+// so the browser never makes the external Google Fonts CSS request.
+// Inter is a variable font — it covers Normal (400) and Bold (700) weights.
+// Roboto has been removed entirely (it was unused).
+const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-inter",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -67,10 +78,20 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className="h-full antialiased"
+      className={`${inter.variable} h-full antialiased`}
       suppressHydrationWarning
     >
       <head>
+        <link
+          rel="preconnect"
+          href="https://fonts.googleapis.com"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
         <script
           dangerouslySetInnerHTML={{
             __html: `(function(){try{var t=localStorage.getItem("theme");if(t==="dark"||(!t&&window.matchMedia("(prefers-color-scheme: dark)").matches)){document.documentElement.classList.add("dark")}}catch(e){}})();`,
@@ -78,8 +99,8 @@ export default function RootLayout({
         />
       </head>
       <body className="relative">
-        {/* Ambient background: light beams & floating particles */}
-        <div className="global-bg" aria-hidden="true">
+        {/* Ambient background: light beams & floating particles (desktop only) */}
+        <div className="global-bg hidden sm:block" aria-hidden="true">
           <div className="global-beam global-beam--1"></div>
           <div className="global-beam global-beam--2"></div>
           <div className="global-beam global-beam--3"></div>
