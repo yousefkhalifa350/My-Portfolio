@@ -10,7 +10,7 @@ export const profile = {
     url: "/CV/Yousef Hesham_Resume.pdf",
     fileName: "Yousef_Hesham_Resume.pdf",
   },
-  tagline:    "Delivering fast, scalable web applications — engineered to load in under 1.5 seconds.",
+  tagline:   "Delivering fast, scalable web applications — optimized for exceptional performance.",
   summary:
     "Delivering efficient, scalable and innovative web applications. Building high-performance interfaces with modern technologies.",
 };
@@ -24,32 +24,28 @@ export const heroTitles = [
 export const heroTags = ["Frontend Developer", "React Expert", "UI Integrator"];
 
 export const heroStats = [
-  { value: 5, suffix: "+", label: "Years of Experience" },
-  { value: 20, suffix: "+", label: "Projects Completed" },
-  { value: 100, suffix: "%", label: "Client Satisfaction" },
+  { value: 4, suffix: "+", label: "Years of Experience" },
+  { value: 10, suffix: "+", label: "Projects Completed" },
+  { value: 100, suffix: "%", label: "Satisfaction" },
 ];
 
 export const about = {
   heading: "About me >> who I'm",
   paragraph:
-    "Frontend Developer specializing in building responsive, scalable, and high-performance web applications using React.js, Next.js, and TypeScript. Experienced in developing production-ready projects with REST APIs integration, authentication flows, and modern state management using Context API and TanStack Query. Skilled in form validation and handling with React Hook Form and Zod, and implementing SEO-friendly and optimized applications using SSR/SSG in Next.js. Focused on performance optimization techniques such as code splitting, lazy loading, and reusable component architecture. Passionate about writing clean, maintainable code and delivering seamless user experiences in Agile development environments.",
+    "Frontend Developer with experience building scalable web applications using React.js Next.js and TypeScript Skilled in developing production-ready solutions including authentication systems API integrations payment workflows and performance optimization Combines technical support and business systems experience with modern frontend engineering to deliver reliable and user-focused digital products",
   technologies: [
-    "HTML5",
-    "CSS3",
-    "JavaScript (ES6+)",
+ 
+   "JavaScript (ES6+)",
     "TypeScript",
     "React.js",
     "Next.js",
     "Tailwind CSS",
     "Context API",
-    "TanStack Query",
-    "React Hook Form",
-    "Zod",
-    "REST APIs",
-    "Git",
+  "REST APIs",
+    "Git & GitHub",
     "Vite",
-    "Code Splitting",
     "SSR/SSG",
+    "NextAuth.js"
   ],
 };
 
@@ -83,27 +79,29 @@ export const skillCategories = [
     title: "Front-End",
     icon: "layout",
     skills: [
-      "HTML",
-      "CSS",
+      "HTML5",
+      "CSS3",
       "JavaScript",
       "TypeScript",
       "React",
       "Next.js",
-      "Tailwind CSS",
-      "Bootstrap",
+      "Context API",
+      "React Hook Form, NextAuth.js",
+      "Tailwind CSS, shadcn/ui, Bootstrap, Framer Motion",
+     "SEO fundamentals, SSR/SSG (Next.js)"
     ],
   },
   {
     id: "tools",
     title: "Tools",
     icon: "tools",
-    skills: ["Git", "GitHub", "VS Code", "Figma", "Vite", "npm"],
+    skills: ["Git", "GitHub", "VS Code", "Figma", "Vite", "npm", "OpenCode", "Copilot Chat"],
   },
   {
     id: "backend",
     title: "Backend & APIs",
     icon: "backend",
-    skills: ["REST API", "JSON", "Postman"],
+    skills: ["REST API", "JSON", "Postman","Authentication / NextAuth.js","API Integration"],
   },
   {
     id: "enterprise",
@@ -111,8 +109,8 @@ export const skillCategories = [
     icon: "enterprise",
     skills: [
       "Oracle Database",
-      "Oracle APEX",
       "Application Server",
+      "6i - Handling",
       "SQL",
       "Windows Server",
       "ERP Systems",
@@ -124,12 +122,12 @@ export const projects = [
   {
     title: "ShopMart — E-Commerce Store",
     description:
-      "Shop smarter, live better: premium products, trusted brands (LC Waikiki, Canon, Samsung, Sony, Dell) and seamless shopping, made for you.", 
+      "Developed a full-featured e-commerce application with Next.js and TypeScript, featuring secure NextAuth authentication, cart and wishlist management, Stripe payment integration, and a responsive user-friendly interface.",
     image:
       "/projects/shopmart.webp",
     live: "https://shopmart-ecommerce.vercel.app/",
     github: "https://github.com/yousefkhalifa350/shopmart-ecommerce",
-    tech: ["Next.js", "React", "Tailwind CSS", "REST APIs"],
+    tech: ["Next.js", "React", "TypeScript", "Tailwind CSS", "NextAuth.js", "REST APIs", "Git", "GitHub", "Vercel"],
     badge: "Production e-commerce",
   },
   {
@@ -140,7 +138,7 @@ export const projects = [
       "/projects/live-weather.webp",
     live: "https://yousefkhalifa350.github.io/live-weather/",
     github: "https://github.com/yousefkhalifa350/live-weather",
-    tech: ["HTML5", "CSS3", "JavaScript", "Fully Responsive"],
+    tech: ["HTML5", "CSS3", "JavaScript", "Bootstrap","Fully Responsive" ,"GitHub", ],
     badge: "Weather data",
   },
   {
@@ -151,7 +149,7 @@ export const projects = [
       "/projects/start-framework.webp",
     live: "https://start-framework-three-sigma.vercel.app/About",
     github: "https://github.com/yousefkhalifa350/Start-Framework",
-    tech: ["Bootstrap", "HTML5", "CSS3", "Vercel"],
+    tech: ["React.js", "JavaScript" ,"(ES6+)", "Tailwind CSS", "React Router", "Git", "GitHub", "Vercel"],
     badge: "Bootstrap-based",
   },
   {
@@ -162,7 +160,7 @@ export const projects = [
       "/projects/daniels.webp",
     live: "https://yousefkhalifa350.github.io/exam-bootstrap/",
     github: "https://github.com/yousefkhalifa350/exam-bootstrap",
-    tech: ["Bootstrap", "HTML5", "CSS3", "JavaScript"],
+    tech: ["Bootstrap", "HTML5", "CSS3", "JavaScript" , "GitHub"],
     badge: "UI kit",
   },
   {
@@ -173,7 +171,7 @@ export const projects = [
       "/projects/task-manager.webp",
     live: "https://task-manager-six-pied-73.vercel.app/",
     github: "https://github.com/yousefkhalifa350/React-Task-Manager",
-    tech: ["React", "JavaScript", "Tailwind CSS", "Vercel"],
+    tech: ["React", "JavaScript", "Tailwind CSS","GitHub",  "Vercel" , "Redux"],
     badge: "Productivity",
   },
 
@@ -185,7 +183,7 @@ export const projects = [
       "/projects/fokir.webp",
     live: "https://yousefkhalifa350.github.io/Assignment-4/",
     github: "https://github.com/yousefkhalifa350/Assignment-4",
-    tech: ["React", "JavaScript", "Tailwind CSS", "Vercel"],
+    tech: ["Bootstrap", "HTML5", "CSS3", "JavaScript","GitHub"],
     badge: "Productivity",
   },
 
@@ -195,19 +193,19 @@ export const projects = [
 export const contact = {
   heading: "Let's work together",
   copy: "Great ideas deserve great execution. I craft high-quality, user-centric web experiences that not only look good but work flawlessly. Let's bring your vision to life — contact me and let's build something extraordinary together!",
-  email: "yousef.hesham@example.com",
+  email: "yousefkhalifa329@gmail.com",
   phone: "01128829775",
   phoneDisplay: "+20 112 882 9775",
   location: "Sheikh Zayed City, Egypt",
   socials: [
     {
       label: "GitHub",
-      href: "https://github.com/",
+      href: "https://github.com/yousefkhalifa350",
       icon: "github",
     },
     {
       label: "LinkedIn",
-      href: "https://linkedin.com/",
+      href: "https://www.linkedin.com/in/yousef-hesham-8197a5284/",
       icon: "linkedin",
     },
   ],

@@ -16,7 +16,12 @@ export default function Hero() {
           {/* ============ TEXT (top on mobile) ============ */}
           <div className="hero-in-left order-1 text-center lg:order-1 lg:text-left">
             <h3 className="mb-2 text-lg font-bold uppercase tracking-wider text-[#00a8e8] md:text-xl">
-              Developer
+              <span className="hero-tech-label" aria-live="polite">
+                <span className="hero-tech hero-tech-react">React</span>
+                <span aria-hidden="true"> &amp; </span>
+                <span className="hero-tech hero-tech-next">Next.js</span>
+              </span>
+              <span> Developer</span>
             </h3>
 
             <h1 className="text-4xl font-extrabold text-slate-800 sm:text-5xl lg:text-6xl dark:text-white">
@@ -67,8 +72,8 @@ export default function Hero() {
                     alt={`${profile.fullName} — ${profile.role}`}
                     fill
                     priority
-                    sizes="(max-width: 768px) 100vw, 460px"
-                    quality={80}
+                    sizes="(max-width: 640px) 320px, 460px"
+                    quality={50}
                     className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                   />
                   <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />

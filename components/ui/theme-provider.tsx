@@ -1,7 +1,7 @@
 // components/ui/theme-provider.tsx
 "use client";
 
-import { createContext, useContext, useEffect, useState } from "react";
+import { createContext, useCallback, useContext, useMemo, useState } from "react";
 
 type Theme = "light" | "dark";
 
@@ -24,23 +24,23 @@ const ThemeContext = createContext<ThemeContextValue>({
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
   const [theme, setTheme] = useState<Theme>(initialTheme);
 
-  useEffect(() => {
-    document.documentElement.classList.toggle("dark", theme === "dark");
-  }, [theme]);
-
-  const toggleTheme = () => {
+  const toggleTheme = useCallback(() => {
     const root = document.documentElement;
-    root.classList.add("theme-transition");
-    window.setTimeout(() => root.classList.remove("theme-transition"), 500);
     setTheme((prev) => {
       const next: Theme = prev === "light" ? "dark" : "light";
+      root.classList.toggle("dark", next === "dark");
       localStorage.setItem("theme", next);
       return next;
     });
-  };
+  }, []);
+
+  const contextValue = useMemo(
+    () => ({ theme, toggleTheme }),
+    [theme, toggleTheme]
+  );
 
   return (
-    <ThemeContext.Provider value={{ theme, toggleTheme }}>
+    <ThemeContext.Provider value={contextValue}>
       {children}
     </ThemeContext.Provider>
   );

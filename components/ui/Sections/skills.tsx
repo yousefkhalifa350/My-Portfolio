@@ -100,10 +100,6 @@ export default function Skills() {
                         }
                         className="reveal-chip inline-flex cursor-default items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-3.5 py-1.5 text-xs font-semibold text-slate-200 transition-all duration-200 hover:-translate-y-0.5 hover:border-sky-400/50 hover:bg-sky-500/10 hover:text-[#00a8e8]"
                       >
-                        <span
-                          className={`h-1.5 w-1.5 rounded-full bg-gradient-to-r ${accent}`}
-                          aria-hidden="true"
-                        />
                         {skill}
                       </span>
                     ))}

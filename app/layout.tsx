@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/ui/ui/navbar/navbar";
+import BackToTop from "@/components/ui/ui/scroll/back-to-top";
 import { ThemeProvider } from "@/components/ui/theme-provider";
 
 const siteUrl = "https://yousef-hesham.vercel.app";
@@ -82,16 +83,6 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <head>
-        <link
-          rel="preconnect"
-          href="https://fonts.googleapis.com"
-          crossOrigin="anonymous"
-        />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
-        />
         <script
           dangerouslySetInnerHTML={{
             __html: `(function(){try{var t=localStorage.getItem("theme");if(t==="dark"||(!t&&window.matchMedia("(prefers-color-scheme: dark)").matches)){document.documentElement.classList.add("dark")}}catch(e){}})();`,
@@ -116,6 +107,7 @@ export default function RootLayout({
         <ThemeProvider>
           <Navbar />
           {children}
+          <BackToTop />
         </ThemeProvider>
       </body>
     </html>

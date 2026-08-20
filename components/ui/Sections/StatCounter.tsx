@@ -1,7 +1,6 @@
 // components/ui/Sections/StatCounter.tsx
 "use client";
 
-import { useInView, animate } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 
 interface StatCounterProps {
@@ -12,17 +11,51 @@ interface StatCounterProps {
 
 export function StatCounter({ value, suffix, label }: StatCounterProps) {
   const ref = useRef<HTMLDivElement>(null);
-  const inView = useInView(ref, { once: true, margin: "-30px" });
+  const [inView, setInView] = useState(false);
   const [display, setDisplay] = useState(0);
 
   useEffect(() => {
+    const element = ref.current;
+    if (!element) return;
+
+    if (typeof IntersectionObserver === "undefined") {
+      const frameId = requestAnimationFrame(() => setInView(true));
+      return () => cancelAnimationFrame(frameId);
+    }
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setInView(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: "-30px", threshold: 0.1 }
+    );
+
+    observer.observe(element);
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
     if (!inView) return;
-    const controls = animate(0, value, {
-      duration: 1.6,
-      ease: "easeOut",
-      onUpdate: (v) => setDisplay(Math.round(v)),
-    });
-    return () => controls.stop();
+
+    const start = performance.now();
+    const duration = 1600;
+    let frameId = 0;
+
+    const update = (now: number) => {
+      const progress = Math.min((now - start) / duration, 1);
+      const easedProgress = 1 - (1 - progress) ** 3;
+      setDisplay(Math.round(easedProgress * value));
+
+      if (progress < 1) {
+        frameId = requestAnimationFrame(update);
+      }
+    };
+
+    frameId = requestAnimationFrame(update);
+    return () => cancelAnimationFrame(frameId);
   }, [inView, value]);
 
   return (
