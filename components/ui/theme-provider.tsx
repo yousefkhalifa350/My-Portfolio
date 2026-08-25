@@ -1,7 +1,7 @@
 // components/ui/theme-provider.tsx
 "use client";
 
-import { createContext, useCallback, useContext, useMemo, useState } from "react";
+import { createContext, useCallback, useContext, useEffect, useMemo, useState } from "react";
 
 type Theme = "light" | "dark";
 
@@ -10,11 +10,15 @@ interface ThemeContextValue {
   toggleTheme: () => void;
 }
 
-const initialTheme =
-  typeof window === "undefined"
-    ? "light"
-    : (localStorage.getItem("theme") as Theme) ||
-      (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+function getInitialTheme(): Theme {
+  if (typeof window === "undefined") return "light";
+  // Read from the DOM class that the inline <script> in layout.tsx already set.
+  // This avoids a race condition with a module-level constant.
+  if (document.documentElement.classList.contains("dark")) return "dark";
+  if (localStorage.getItem("theme") === "light") return "light";
+  if (localStorage.getItem("theme") === "dark") return "dark";
+  return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+}
 
 const ThemeContext = createContext<ThemeContextValue>({
   theme: "light",
@@ -22,16 +26,18 @@ const ThemeContext = createContext<ThemeContextValue>({
 });
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
-  const [theme, setTheme] = useState<Theme>(initialTheme);
+  const [theme, setTheme] = useState<Theme>(getInitialTheme);
+
+  useEffect(() => {
+    document.documentElement.classList.toggle("dark", theme === "dark");
+  }, [theme]);
 
   const toggleTheme = useCallback(() => {
     const root = document.documentElement;
-    setTheme((prev) => {
-      const next: Theme = prev === "light" ? "dark" : "light";
-      root.classList.toggle("dark", next === "dark");
-      localStorage.setItem("theme", next);
-      return next;
-    });
+    const next: Theme = root.classList.contains("dark") ? "light" : "dark";
+    root.classList.toggle("dark", next === "dark");
+    localStorage.setItem("theme", next);
+    setTheme(next);
   }, []);
 
   const contextValue = useMemo(
